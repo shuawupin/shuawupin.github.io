@@ -113,7 +113,7 @@ console.log(w1)
     delBtn.src = url1 + wupin[i].value + ".png";
 
 
-   // delBtn.src = "wupin/" + wupin[i].value  + ".png";
+   // delBtn.src = url1 + wupin[i].value  + ".png";
   
     delBtn.value =i;
 
@@ -176,7 +176,7 @@ function xx(){
        var script = document.createElement('script');
         script.id="jiazaixiangqing"
         script.type = "text/javascript";
-        script.src = "./wupin/shuoming/"  + wupin[k].js;
+        script.src = url2  + wupin[k].js;
        document.body.appendChild(script);
         document.getElementById("jiazai").innerText = '内容加载中····';
 
