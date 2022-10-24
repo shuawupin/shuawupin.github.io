@@ -265,17 +265,24 @@ body {
 
 
 #wpt {
-    position: absolute;
+  
     width: 30px;
     height: 30px;
 }
 
 
 #wpm {
-    position: absolute;
-    left: 31px;
+    position:relative;
+    bottom: 4px;
+    left: 3px;
 }
 
+#jg {
+    position: relative;
+    bottom: 4px;
+    left: 3px;
+    color: red;
+}
 
  
 
