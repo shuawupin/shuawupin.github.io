@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <meta name="referrer" content="never" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title></title>
+    <link href="wupin.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+
+    <div style="margin-left: 10px;font-size: 18px;"> 已选择的物品:<a style="color:red;font-size: 16px;">(可以手动编辑)</a></div>
+    <div><textarea id="text1" maxlength="5000" placeholder="" class="textbox"  onchange="text()" style="padding: 9.41468px; overflow: auto; border-radius: 7.53175px; border: 0.941468px solid rgb(0, 0, 205); position: relative;  font-size: 16px;" ></textarea></div>
+ 
+
+    <div style="height: 40px">
+        <span id="tianjia" onclick="dianwo()">添加物品</span>
+        <span id="qingchu" onclick="qingchu()">清空选择</span>
+    </div>
+    <div id="tijiao"  onclick="tijiao()"   >提交</div>
+
+    <div style="padding-left: 10px; padding-top: 15px;color:crimson;">
+        <span>ID:</span>
+        <span id="Iid"></span>
+    </div>
+
+    <!--
+      <div class="zhezhao" id='zhezhao'>
+    -->
+    <div id='zhezhao'>
+        <div class='beijing1' onclick="hidder('zhezhao')"></div>
+        <div class='beijing2'></div>
+        <div class="tankuang">
+            <div style="font-size: 20px;height: 30px"> 代刷列表 <a style="font-size:15px;color:fuchsia;">[有</a><a style="color: blue; font-size: 15px;">127</a><a style="font-size:15px;color:fuchsia;">=127个]，点物品添加</a> </div>
+            <div class="header-right" onclick="hidder('zhezhao')">✕</div>
+            <div id="wupinkuang">
+            </div>
+
+            <div id="ckwp" onclick="hidder('zhezhao')"> 查看已添加物品 </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div id='zhezhao1'>
+        <div class='beijing1'></div>
+        <div class='beijing3'></div>
+
+        <div class="tankuang1">
+            <!--  <div id="header1">-->
+            <img id="wpt"><a id="wpm" style="font-size: 20px;height: 35px"></a>
+            <div class="header-right" onclick="hidder('zhezhao1')">✕</div>
+            <div id="jiazai">
+
+            </div>
+
+
+
+
+
+            <div id="wupinkuang1">
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+            <span id="queren" onclick="tianjia()">确认添加</span>
+            <span id="quxiao" onclick="hidder('zhezhao1')">取 消</span>
+
+            <!--      </div> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./wupin.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+
+        console.log(window.btoa(unescape(encodeURIComponent('我是一段需要处理的字符'))));
+        console.log(decodeURIComponent(escape(window.atob('5oiR5piv5LiA5q616ZyA6KaB5aSE55CG55qE5a2X56ym'))));
+        document.getElementById('zhezhao1').style.display = "none";
+
+        function text() {
+            var t1 = document.getElementById('text1').value;
+            localStorage.setItem("txt", t1);
+        }
+
+
+        function dianwo() {
+
+            document.getElementById('zhezhao').style.display = "";
+        }
+
+        function qingchu() {
+            if (confirm("确认清空已选择列表?") == true) {
+                document.getElementById('text1').value = "";
+                localStorage.removeItem("txt");
+            }
+        }
+        function hidder(a) {
+            document.getElementById('jiazai').innerHTML = "";
+            document.getElementById(a).style.display = "none";
+            if (a == "zhezhao1") {
+                document.getElementById('wupinkuang1').innerHTML = "";
+
+             
+
+                document.getElementById("jiazaixiangqing").remove();
+            }
+
+
+        }
+ 
+    
+
+        var id = localStorage.getItem("id");
+        var txt = localStorage.getItem("txt");
+
+        if (id == null) {
+            id = Math.floor(Math.random() * 9999) + 1;
+            localStorage.setItem("id", id);
+        }
+        if (txt != null) {
+            document.getElementById('text1').value = txt;
+        }
+
+
+
+        document.getElementById('Iid').innerText = id;
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
