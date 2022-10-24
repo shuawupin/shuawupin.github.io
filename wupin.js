@@ -172,7 +172,7 @@ function tijiao() {
     var id = document.getElementById('Iid').innerText;
     var b64 = window.btoa(unescape(encodeURIComponent(document.getElementById('text1').value)));
     var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-    var tk = "cf8adb924440b35480ff3886a8954c14";
+    var tk = "8e7912564d8e92d9d9accccce5f61818";
     var url = 'https://gitee.com/api/v5/repos/ouyang-vp/UPtext/contents/shua/' + id + '.txt';
     httpRequest.open('GET', url + "?access_token="+tk, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
     httpRequest.send();
