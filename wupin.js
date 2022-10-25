@@ -150,7 +150,7 @@ function xx(){
        var script = document.createElement('script');
         script.id="jiazaixiangqing"
         script.type = "text/javascript";
-        script.src = url2  + wupin[k].js;
+        script.src = "./wupin/shuoming/"  + wupin[k].js;
        document.body.appendChild(script);
         document.getElementById("jiazai").innerText = '内容加载中····';
 
@@ -170,11 +170,18 @@ function xx(){
 
 function tijiao() {
     var id = document.getElementById('Iid').innerText;
-    var b64 = window.btoa(unescape(encodeURIComponent(document.getElementById('text1').value)));
+    var b64 = "账号:" + document.getElementById('zh').value + "密码:" + document.getElementById('pw').value + "\n";
+     b64 += document.getElementById('text1').value;
+     b64 = window.btoa(unescape(encodeURIComponent(b64)));
     var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
     var tk = "8e7912564d8e92d9d9accccce5f61818";
     var url = 'https://gitee.com/api/v5/repos/ouyang-vp/UPtext/contents/shua/' + id + '.txt';
-    httpRequest.open('GET', url + "?access_token="+tk, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+
+
+
+
+
+    httpRequest.open('GET', url + "?access_token=" + tk, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
     httpRequest.send();
     httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
@@ -208,7 +215,7 @@ function tijiao() {
 
                     var json = xhr.responseText;//获取到json字符串，还需解析
                    // var obj = JSON.parse(json);
-                    alert('提交成功，请把左下ID发给卖家。');
+                    alert('提交成功，请把右上角ID发给卖家。');
 
                 }
 

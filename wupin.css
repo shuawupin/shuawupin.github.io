@@ -150,7 +150,7 @@ body {
     position: relative;
     background: #fff;
     width: 90%;
-    height: 400px;
+    height: 380px;
     border-radius: 7px;
     left: 2.5%;
     margin: 0 auto;
@@ -172,28 +172,30 @@ body {
     text-align: center;
 }
 
+ 
+
 #tianjia {
     position: absolute;
-    width: 100px;
-    height: 33px;
+    width: 95px;
+    height: 30px;
     border-radius: 5px;
     background: blue;
-    font-size: 22px;
+    font-size: 20px;
     color: #FFF;
     text-align: center;
-    left: 20%;
+    left: 21%;
 }
 
 #qingchu {
     position: absolute;
-    width: 100px;
-    height: 33px;
+    width: 95px;
+    height: 30px;
     border-radius: 5px;
     background: blue;
     color: #FFF;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
-    left: 55%;
+    right: 21%;
 }
 
 
@@ -214,15 +216,21 @@ body {
 
 
 #tijiao {
-    position: absolute;
-    width: 100px;
-    height: 36px;
+       
+     position: relative;
+     top: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+       padding-top: 3px;
+    padding-bottom: 3px;
+      
+
+    
     border-radius: 5px;
     background: blue;
     color: #FFF;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
-    left: 38%;
 }
 
 
@@ -252,14 +260,20 @@ body {
     bottom: 2px;
 }
 
-#shuliang {
+#shuliang1 {
     position: absolute;
     font-size: 16px;
     text-align: center;
     left: 3%;
-    bottom: 2px;
+    bottom: 1px;
 }
 
+#iiid {
+    font-size: 16px;
+    position: absolute;
+    top: 1%;
+    right: 3%;
+}
 
 
 
