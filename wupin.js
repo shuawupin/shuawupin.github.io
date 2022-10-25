@@ -156,7 +156,7 @@ function xx(){
 
 
 
-       // document.getElementById("jiazaixiangqing").src = "./wupin/shuoming/" + wupin[k].js;
+       // document.getElementById("jiazaixiangqing").src = url2 + wupin[k].js;
 
 
     }
