@@ -97,13 +97,35 @@ console.log(w1)
 
 var delBtn = document.createElement('div');
    delBtn.style.color= 'fuchsia';
-     delBtn.innerHTML='支持刷到任意存档上<br>提供游戏账密(HIVE)即可';
+     delBtn.innerHTML='支持刷到任意存档上,量多优惠<br>提供游戏账密(HIVE)即可';
 
  o.appendChild(delBtn);
 
 
 
 
+            var id = localStorage.getItem("id");
+            var txt = localStorage.getItem("txt");
+            var zh= localStorage.getItem("zh");
+            var pw = localStorage.getItem("pw");
+
+            if (id == null) {
+                id = Math.floor(Math.random() * 9999) + 1;
+                localStorage.setItem("id", id);
+            }
+            if (txt != null && txt != "") {
+                document.getElementById('text1').value = txt;
+              document.getElementById('zhezhao').style.display = "none";
+           
+            }
+
+            if (zh != null) {
+                document.getElementById('zh').value = zh;
+            }
+            if (pw != null) {
+                document.getElementById('pw').value = pw;
+            }
+            document.getElementById('Iid').innerText = id;
 
 
 
