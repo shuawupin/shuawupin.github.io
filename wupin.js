@@ -96,9 +96,10 @@ console.log(w1)
  
 
  
+ var delBtn = document.createElement('div');
+     delBtn.innerHTML='支持刷到任意存档上\n提供游戏账密(HIVE)即可';
 
-
-
+ o.appendChild(delBtn);
 
 
 
