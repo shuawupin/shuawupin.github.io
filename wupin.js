@@ -2,7 +2,7 @@
 qshuoming=""
 var o = document.getElementById("wupinkuang");
 var c = document.getElementById("wupinkuang1");
-var w = o.offsetWidth;
+var w = qwidth;
 
  
 var url1 = "https://gitee.com/ouyang-vp/ainuo/raw/master/wupin/"
@@ -104,31 +104,7 @@ var delBtn = document.createElement('div');
 
 
 
-            var id = localStorage.getItem("id");
-            var txt = localStorage.getItem("txt");
-            var zh= localStorage.getItem("zh");
-            var pw = localStorage.getItem("pw");
-
-            if (id == null) {
-                id = Math.floor(Math.random() * 9999) + 1;
-                localStorage.setItem("id", id);
-            }
-            if (txt != null && txt != "") {
-                document.getElementById('text1').value = txt;
-              document.getElementById('zhezhao').style.display = "none";
-           
-            }
-
-            if (zh != null) {
-                document.getElementById('zh').value = zh;
-            }
-            if (pw != null) {
-                document.getElementById('pw').value = pw;
-            }
-            document.getElementById('Iid').innerText = id;
-
-
-
+       
 
 
 
