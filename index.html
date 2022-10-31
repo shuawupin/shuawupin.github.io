@@ -176,35 +176,13 @@
 
 
 
-            var id = localStorage.getItem("id");
-            var txt = localStorage.getItem("txt");
-            var zh= localStorage.getItem("zh");
-            var pw = localStorage.getItem("pw");
 
 
-
-            if (id == null) {
-                id = Math.floor(Math.random() * 9999) + 1;
-                localStorage.setItem("id", id);
-            }
-            if (txt != null && txt != "") {
-                document.getElementById('text1').value = txt;
-              document.getElementById('zhezhao').style.display = "none";
-           
-            }
-
-            if (zh != null) {
-                document.getElementById('zh').value = zh;
-            }
-            if (pw != null) {
-                document.getElementById('pw').value = pw;
-            }
-
-
-
-            document.getElementById('Iid').innerText = id;
-
-
+window.onload=function (){
+  var js = document.createElement('script');
+js.src = 'wupin.js';
+document.body.appendChild(js);
+}
 
 
         </script>
