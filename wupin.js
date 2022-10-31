@@ -77,7 +77,7 @@ console.log(w1)
  for (var i = 0 ;i<wupin.length;i++){  
    
      var delBtn = document.createElement('img');
-     delBtn.style = "vertical-align:sub;";
+     delBtn.style.verticalAlign = 'bottom';
      delBtn.height = w1;
      delBtn.width = w1;
      delBtn.onclick = xx;
