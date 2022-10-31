@@ -187,9 +187,9 @@
                 id = Math.floor(Math.random() * 9999) + 1;
                 localStorage.setItem("id", id);
             }
-            if (txt != null) {
+            if (txt != null && txt != "") {
                 document.getElementById('text1').value = txt;
-              document.getElementById('zhezhao').style.display = "";
+              document.getElementById('zhezhao').style.display = "none";
            
             }
 
